@@ -1,0 +1,128 @@
+/*
+Theme Name:     Gnar DEMO Child Theme
+Description:    Demo Child theme for Chair 6 demo #1.
+Author:         Jason Bobich
+Author URI:		http://www.jasonbobich.com
+Template:       gnar
+*/
+
+/* Visible Menu Option */
+body:not(.menu-visible) .site-menu-panel .header-top-nav {
+    display: none;
+}
+
+/* Boxed Layout */
+.gnar-boxed {
+    background: #1b1b1b;
+}
+.gnar-boxed #custom-main > .call-to-action:not(.has-bg),
+.gnar-boxed #custom-main .blog--sidebar,
+.gnar-boxed #custom-main .masonry-blog {
+    background: #ffffff;
+}
+
+/* Standard header (when suck up is set) */
+.demo-standard-header .site-header.transparent .header-bg {
+    opacity: 1 !important;
+}
+
+/* Modern Header Style */
+.demo-has-modern .jumbotron-outer:before {
+    content: "";
+    background: -webkit-linear-gradient(top, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 100%);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 200px;
+    z-index: 0;
+}
+
+/* Main Panel */
+.tb-demo-panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -200px;
+    -webkit-transition: right .2s ease-in-out;
+    transition: right .2s ease-in-out;
+    width: 200px;
+    z-index: 1000;
+}
+.tb-demo-panel.on {
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    right: 0;
+}
+.tb-demo-panel .demo-panel-toggle {
+    background: rgba(255,255,255,.9) url('assets/svg/cogs.svg') center center no-repeat;
+    background-size: 15px 15px;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    outline: none;
+    position: absolute;
+    /*top: 70px;*/
+    bottom: 90px;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+}
+.tb-demo-panel.on .demo-panel-toggle {
+    background-image: url('assets/svg/close.svg');
+    background-size: 10px 10px;
+}
+.tb-demo-panel ul {
+    background: rgba(255,255,255,.9);
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+@media (max-width: 991px) {
+    .tb-demo-panel {
+        display: none;
+    }
+}
+
+/* Options */
+.tb-demo-panel li {
+    padding: 12px 32px 12px 20px;
+}
+.tb-demo-panel li:first-child {
+    padding-top: 20px;
+}
+.tb-demo-panel li:last-child {
+    padding-bottom: 20px;
+}
+.tb-demo-panel li.no-title {
+    padding-top: 0;
+}
+.tb-demo-panel h5 {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 0 10px 4px;
+}
+
+/* Form Elements */
+.tb-demo-panel select,
+.tb-demo-panel input {
+    border: 1px solid #dddddd;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 28px;
+    margin: 0;
+    outline: none;
+    padding: initial;
+    width: 100%;
+    height: 28px;
+}
+.tb-demo-panel input {
+    line-height: 28px;
+    padding: 0 10px;
+}
